@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANTAGE STUDIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #000, #222);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b00;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('background-image.jpg') no-repeat center center/cover;
+            animation: fadeIn 3s;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #ff6b00;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+            animation: spotlight 3s forwards; /* Only run once and stop */
+            z-index: 1;
+        }
+
+        @keyframes spotlight {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: white;
+            animation: fadeInText 2s ease-out;
+        }
+
+        .hero button {
+            padding: 10px 25px;
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #e55a00;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #111;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            color: #ff6b00;
+            margin-bottom: 20px;
+        }
+
+        .features .feature-box {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .features .feature-box .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .features .feature-box .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .features .feature-box .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .features .feature-box .feature p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.png" alt="VANTAGE STUDIO Logo"></div>
+        <nav>`		
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to VANTAGE STUDIO</h1>
+        <p>Your vision, our creation. Let's make something extraordinary together.</p>
+        <button onclick="window.location.href='second page.html'">EXPLORE PAGE</button>
+
+		
+    </section>
+
+    <section class="features">
+        <h2>Our Services</h2>
+        <div class="feature-box">
+            <div class="feature">
+                <h3>Film Production</h3>
+                <p>High-quality, professional video production tailored to your needs.</p>
+            </div>
+            <div class="feature">
+                <h3>VFX and Animation</h3>
+                <p>Advanced visual effects and animations to bring your ideas to life.</p>
+            </div>
+            <div class="feature">
+                <h3>Post-Production</h3>
+                <p>Seamless editing, sound design, and finishing touches for a perfect result.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 VANTAGE STUDIO. All Rights Reserved.
+    </footer>
+</body>
+</html>
